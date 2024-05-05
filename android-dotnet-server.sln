@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34728.123
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestServer2", "TestServer2\TestServer2.csproj", "{9DC14B03-3276-4019-8C29-10EE632367C8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "android-dotnet-server", "android-dotnet-server\android-dotnet-server.csproj", "{BE6EFC47-7EFE-4A71-8EE4-8DB6092924DC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{9DC14B03-3276-4019-8C29-10EE632367C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9DC14B03-3276-4019-8C29-10EE632367C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9DC14B03-3276-4019-8C29-10EE632367C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9DC14B03-3276-4019-8C29-10EE632367C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE6EFC47-7EFE-4A71-8EE4-8DB6092924DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE6EFC47-7EFE-4A71-8EE4-8DB6092924DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE6EFC47-7EFE-4A71-8EE4-8DB6092924DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE6EFC47-7EFE-4A71-8EE4-8DB6092924DC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {F0866D4B-FF83-4918-A93B-57FF01716C26}
+		SolutionGuid = {F1575C2E-D448-49E0-ACF9-035D9CF0798A}
 	EndGlobalSection
 EndGlobal

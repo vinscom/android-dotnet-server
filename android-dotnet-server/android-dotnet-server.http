@@ -1,0 +1,6 @@
+@android_dotnet_server_HostAddress = http://localhost:5051
+
+GET {{android_dotnet_server_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
