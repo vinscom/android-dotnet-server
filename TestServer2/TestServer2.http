@@ -1,0 +1,11 @@
+@TestServer2_HostAddress = http://localhost:5125
+
+GET {{TestServer2_HostAddress}}/todos/
+Accept: application/json
+
+###
+
+GET {{TestServer2_HostAddress}}/todos/1
+Accept: application/json
+
+###
