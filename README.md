@@ -51,7 +51,7 @@ proot-distro login alpine
 ## Download .Net 8
 https://dotnet.microsoft.com/en-us/download/dotnet/8.0
 
-NOTE: Install .Net baserd on your phone architecture (32 or 64). Below example is for ARM32
+NOTE: Install .Net based on your phone architecture (32 or 64). Below example is for ARM32
 
 ```
 wget https://download.visualstudio.microsoft.com/download/pr/67254d85-fcab-415e-be63-15d3a3b26f4b/a593418de05aedaf8278c6c5b9371682/dotnet-sdk-8.0.204-linux-musl-arm.tar.gz
