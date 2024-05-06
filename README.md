@@ -1,5 +1,10 @@
 This is document to show how to run dotnet server on your android mobile. 
 
+| No | Phone                   | CPU Type |
+|----|-------------------------|----------|
+| 1  | Samsung Galaxy J7 Prime | Arm 32   |
+| 2  | Samsung S24 Ultra       | Arm 64   |
+
 # Install Termux on android mobile
 Download Termux from `https://f-droid.org/en/packages/com.termux`
 
@@ -46,7 +51,7 @@ proot-distro login alpine
 ## Download .Net 8
 https://dotnet.microsoft.com/en-us/download/dotnet/8.0
 
-NOTE: Install .Net baserd on your phone architecture (32 or 64). Below example is for ARM32 (My Phone is Galaxy J7 Prime)
+NOTE: Install .Net baserd on your phone architecture (32 or 64). Below example is for ARM32
 
 ```
 wget https://download.visualstudio.microsoft.com/download/pr/67254d85-fcab-415e-be63-15d3a3b26f4b/a593418de05aedaf8278c6c5b9371682/dotnet-sdk-8.0.204-linux-musl-arm.tar.gz
@@ -54,7 +59,7 @@ wget https://download.visualstudio.microsoft.com/download/pr/67254d85-fcab-415e-
 mkdir dotnet
 mv dotnet-sdk-8.0.204-linux-musl-arm.tar.gz ./dotnet
 cd dotnet
-tar -xvf
+tar -xvf dotnet-sdk-8.0.204-linux-musl-arm.tar.gz
 rm dotnet-sdk-8.0.204-linux-musl-arm.tar.gz
 
 apk add libstdc++ icu-libs
