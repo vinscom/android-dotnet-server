@@ -1,9 +1,9 @@
-This is document to show how to run dotnet server on your android mobile. 
+This is document to show how to run dotnet server on your Arm based android mobile. 
 
-| No | Phone                   | CPU Type |
-|----|-------------------------|----------|
-| 1  | Samsung Galaxy J7 Prime | Arm 32   |
-| 2  | Samsung S24 Ultra       | Arm 64   |
+| No | Phone                   | CPU Type (Phone Year) |
+|----|-------------------------|-----------------------|
+| 1  | Samsung Galaxy J7 Prime | Arm 32 (2016)         |
+| 2  | Samsung S24 Ultra       | Arm 64  (2024)        |
 
 # Install Termux on android mobile
 Download Termux from `https://f-droid.org/en/packages/com.termux`
@@ -115,7 +115,7 @@ http {
 4. Port forward on your public IP. `Public IP:80 -> Android Phone IP:8080`
 5. DNS map your domain to your public IP
 6. Check Nginx is accessible `http://192.168.1.221:8080`
-7. Check Nginx is publicly  `http://exmaple.com/WeatherForecast`
+7. Check Nginx is publicly available `http://exmaple.com/WeatherForecast`
 
 
 # Enable HTTPS (Inside proot-distro)
@@ -132,7 +132,7 @@ Certificate is saved at: /etc/letsencrypt/live/example.com/fullchain.pem
 Key is saved at:         /etc/letsencrypt/live/example.com/privkey.pem
 ```
 
-Link cert to Nginx
+Copy cert to Nginx
 ```
 mkdir -p /data/data/com.termux/files/usr/etc/letsencrypt/live
 cp -r /etc/letsencrypt/archive/example.com  /data/data/com.termux/files/usr/etc/letsencrypt/live/
@@ -198,10 +198,10 @@ Commands:
 1. Tail logs `tail -f $PREFIX/var/log/sv/dotnetserver/current`
 2. Start Service `sv up dotnetserver`
 3. Service status `sv status dotnetserver`
-4. Top may not work correctly. Below is method
+4. Stop service may not work correctly. Below is method
     - Stop service `sv down dotnetserver`
     - Check if service is still running `sv status dotnetserver`
-    - Kill Service and Service log using ids provided in status. `kill -9 123456`
+    - Kill Service and Service log processes using ids provided in status.e.g. `kill -9 123456`
 
 # Stop Mobile from Sleeping
 You will have to install https://wiki.termux.com/wiki/Termux:Boot
