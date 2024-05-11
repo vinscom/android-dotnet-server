@@ -75,6 +75,7 @@ export DOTNET_GCHeapHardLimit=1C0000000
 
 NOTE: `exit` and `proot-distro login alpine` to load profile
 
+
 # Run Code(Inside proot-distro)
 ```
 git clone https://github.com/vinscom/android-dotnet-server.git
@@ -184,7 +185,7 @@ chmod +x $PREFIX/var/service/dotnetserver/log/run
 Service file `$PREFIX/var/service/dotnetserver/run`
 ```
 #!/data/data/com.termux/files/usr/bin/sh
-exec proot-distro login alpine -- /root/dotnet/dotnet /root/android-dotnet-server/android-dotnet-server/bin/Release/net8.0/publish/android-dotnet-server.dll 2>&1
+exec proot-distro login alpine -- /root/android-dotnet-server/run.sh 2>&1
 ```
 
 Log file `$PREFIX/var/service/dotnetserver/log/run`
