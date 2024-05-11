@@ -220,3 +220,28 @@ File `stop-from-sleep`
 termux-wake-lock
 . $PREFIX/etc/profile
 ```
+
+# Install Redis Service
+Create Termux Service
+
+```
+mkdir -p $PREFIX/var/service/redis/log/supervise
+mkdir -p $PREFIX/var/service/redis/supervise
+nano $PREFIX/var/service/redis/run
+nano $PREFIX/var/service/redis/log/run
+chmod +x $PREFIX/var/service/redis/run
+chmod +x $PREFIX/var/service/redis/log/run
+```
+
+Service file `$PREFIX/var/service/redis/run`
+```
+#!/data/data/com.termux/files/usr/bin/sh
+exec redis-server redis-server $PREFIX/etc/redis.conf 2>&1
+```
+
+Log file `$PREFIX/var/service/redis/log/run`
+```
+#!/data/data/com.termux/files/usr/bin/sh
+svlogger="/data/data/com.termux/files/usr/share/termux-services/svlogger"
+exec "${svlogger}" "$@"
+```
