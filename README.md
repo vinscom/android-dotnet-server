@@ -16,6 +16,11 @@ NOTE: No need to install F-Droid. You can install termux directly.
 pkg update && pkg upgrade
 pkg install termux-services
 pkg install openssh
+```
+
+Restart termux to start service demon and then execute below command to run sshd
+
+```
 sv-enable sshd
 sv up sshd
 ```
