@@ -53,19 +53,19 @@ proot-distro login alpine
 ```
 
 # Download .Net Core (Inside proot-distro)
-## Download .Net 8
-https://dotnet.microsoft.com/en-us/download/dotnet/8.0
+## Download .Net 9
+https://dotnet.microsoft.com/en-us/download/dotnet/9.0
 
 NOTE: Install .Net based on your phone architecture (32 or 64). Below example is for ARM32
 
 ```
-wget https://download.visualstudio.microsoft.com/download/pr/67254d85-fcab-415e-be63-15d3a3b26f4b/a593418de05aedaf8278c6c5b9371682/dotnet-sdk-8.0.204-linux-musl-arm.tar.gz
+wget https://builds.dotnet.microsoft.com/dotnet/Sdk/9.0.200/dotnet-sdk-9.0.200-linux-musl-arm.tar.gz
 
 mkdir dotnet
-mv dotnet-sdk-8.0.204-linux-musl-arm.tar.gz ./dotnet
+mv dotnet-sdk-9.0.200-linux-musl-arm.tar.gz ./dotnet
 cd dotnet
-tar -xvf dotnet-sdk-8.0.204-linux-musl-arm.tar.gz
-rm dotnet-sdk-8.0.204-linux-musl-arm.tar.gz
+tar -xvf dotnet-sdk-9.0.200-linux-musl-arm.tar.gz
+rm dotnet-sdk-9.0.200-linux-musl-arm.tar.gz
 
 apk add libstdc++ icu-libs
 ```
@@ -75,7 +75,7 @@ Add file `/etc/profile.d/dotnet.sh` and below lines
 ```
 export PATH="$PATH:/root/dotnet"
 export ASPNETCORE_URLS="http://0.0.0.0:8000"
-export DOTNET_GCHeapHardLimit=1C0000000
+export DOTNET_GCHeapHardLimit=100000000
 ```
 
 NOTE: `exit` and `proot-distro login alpine` to load profile
@@ -88,7 +88,7 @@ git clone https://github.com/vinscom/android-dotnet-server.git
 cd android-dotnet-server
 dotnet publish -c Release
 
-dotnet /root/android-dotnet-server/android-dotnet-server/bin/Release/net8.0/publish/android-dotnet-server.dll
+dotnet /root/android-dotnet-server/android-dotnet-server/bin/Release/net9.0/publish/android-dotnet-server.dll
 ```
 
 Test URL: `http://192.168.1.221:8000/WeatherForecast`
